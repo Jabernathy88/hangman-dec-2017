@@ -6,16 +6,9 @@ Due Thursday 12/14/17
 
 ### Getting started.
 
-Here is the link to my GitHub repo for this project:
+Here's the link to my Trello for tracking user stories:
 
-```
-https://github.com/Jabernathy88/hangman-dec-2017
-```
-
-And the link to my Trello for tracking user stories:
-```
-https://trello.com/b/SMKLURfg/hangman-app-dec-2017
-```
+[Hangman Project Trello](https://trello.com/b/SMKLURfg/hangman-app-dec-2017)
 
 ### Wireframes.
 
