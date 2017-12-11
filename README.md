@@ -19,8 +19,7 @@ https://trello.com/b/SMKLURfg/hangman-app-dec-2017
 
 Image below: 
 
-![My wireframe sketch]
-(media/hangman-wireframe-mvp1.png)
+![wireframeSketch](./media/hangman-wireframe-mvp1.png)
 
 ### More progress to come.
 
