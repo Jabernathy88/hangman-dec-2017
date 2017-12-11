@@ -1,10 +1,12 @@
 # Hangman Prototype
-## Project 1, by Jeremy Abernathy
-### Due: Thursday 12/14/17
+
+Project 1, by Jeremy Abernathy
+
+Due Thursday 12/14/17
 
 ### Getting started.
 
-Here is the links to my GitHub repo for this project:
+Here is the link to my GitHub repo for this project:
 
 ```
 https://github.com/Jabernathy88/hangman-dec-2017
