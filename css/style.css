@@ -1,0 +1,54 @@
+body {
+    min-height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;    
+  }
+
+.container {
+    min-width: 80vh;
+    min-height: 90vh;
+    padding: 6px;
+    margin: 12px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    border: 1px solid white;
+    margin: 10px auto;
+    border-radius: 10px;    
+}
+
+.title-banner {
+    width: 96%;
+    height: 120px;
+    background-color: rgba(125, 5, 25, .9);
+    color: rgb(255,255,255);
+    padding: 20px;    
+    margin: 10px auto;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;    
+  }
+
+.puzzle-box {
+    width: 70%;
+    height: 100px;
+    margin: 10px auto;    
+    background-color: rgba(125, 5, 25, .9);
+    color: rgb(255,255,255);   
+    border-radius: 10px;
+    font: 14pt Comic Sans MS;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+.game-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
