@@ -1,54 +1,108 @@
 body {
+    /* color currently black, from bootswatch */
+    min-width: 100vh;
     min-height: 100vh;
     margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;    
-  }
-
-.container {
-    min-width: 80vh;
-    min-height: 90vh;
-    padding: 6px;
-    margin: 12px auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     text-align: center;
-    border: 1px solid white;
-    margin: 10px auto;
-    border-radius: 10px;    
 }
 
-.title-banner {
-    width: 96%;
-    height: 120px;
-    background-color: rgba(125, 5, 25, .9);
-    color: rgb(255,255,255);
-    padding: 20px;    
-    margin: 10px auto;
+.container {
+    /* same color as body */
+    border: 1px solid white;
     border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;    
-  }
+    max-width: 96% 650px;
+    max-height: 96% 650px;
 
-.puzzle-box {
-    width: 70%;
-    height: 100px;
-    margin: 10px auto;    
-    background-color: rgba(125, 5, 25, .9);
-    color: rgb(255,255,255);   
-    border-radius: 10px;
-    font: 14pt Comic Sans MS;
+    margin: 1px;
+    padding: 1px;
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  
-.game-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
 }
+
+    main {
+        /* main is invisible, same color as container. defines height only. */
+        min-width: 500px;
+        min-height: 500px;
+        margin: 1px;
+        padding: 1px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        }
+    
+        head {
+            /* using bootswatch 'primary' color */
+            margin: 1px;
+            padding: 1px;
+            min-width: 96%;    
+            min-height: 100px;
+        }
+
+        nav {
+            /* same color as body */
+            margin: 1px;
+            padding: 1px;
+            min-width: 96%;    
+            min-height: 40px;
+        }
+
+        .game-board {
+            /* using bootswatch 'light navbar' color */
+            border-radius: 10px;            
+            margin: 1px;
+            padding: 10px 1px 1px;
+            min-width: 60%;
+            max-height: 320px;
+            display: flex;            
+            flex-direction: column;
+        }
+
+            .hangman-counter {
+                /* background is white
+                div size is about one-third stock image size 
+                so (256px * 0.31 rounded down) */
+                border: 1px solid white;
+                border-radius: 10px;
+                background: rgb(255, 255, 255);
+                color: rgb(0, 0, 0);
+                margin: 1px;
+                padding: 1px;
+                min-width: 82px;    
+                min-height: 82px;
+            }
+
+            .puzzle-box {
+                /* background same as body */
+                margin: 1px;
+                padding: 10px 1px 1px;
+                min-width: 96%;    
+                min-height: 110px;
+            }
+
+            .alphabet-box {
+                /* using bootswatch 'light' color */
+                margin: 1px;
+                padding: 1px;
+                min-width: 96%;    
+                min-height: 80px;
+            }
+        
+        .bottom-info {
+            margin: 1px;
+            padding: 1px;
+            min-width: 96%;    
+            min-height: 80px;
+        }
+
+        footer {
+            /* using bootswatch 'light' color */ 
+            margin: 1px;
+            padding: 1px;
+            min-width: 96%;    
+            min-height: 20px;
+        }

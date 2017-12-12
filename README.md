@@ -1,8 +1,12 @@
-# Hangman Prototype
+# ZOMBIE HANGMAN
 
 Project 1, by Jeremy Abernathy
 
+Prototype: v.0.1
+
 Due Thursday 12/14/17
+
+* last documented: 8:30pm Mon. 12/11/17
 
 ### Getting started.
 
