@@ -1,12 +1,12 @@
 $(document).ready (() => {
 
-let hiddenWord = {
+let hiddenWordGhost = {
   name: 'ghost',
   letters: ['g', 'h', 'o', 's', 't'],
   hint: 'White, spooky. Like the things in Pacman.'
 }
 
-let hiddenWordDracula = {
+let hiddenWord = {
   name: 'dracula',
   letters: ['d', 'r', 'a', 'c', 'u', 'l', 'a'],
   hint: 'The lord of all vampires. His grave is in Memphis, TN.'
@@ -14,17 +14,22 @@ let hiddenWordDracula = {
 
 const createNewGameBoard = () => {
   $('h2.puzzle-text').text(' ')
-  const createOneHiddenBlank = (item, index) => {
+  let hiddenLetterArray = hiddenWord.letters
+  function createOneHiddenBlank(item, index) {
     let hiddenLetterValue = item
     let hiddenLetterIndex = index.toString()
     $('h2.puzzle-text').append(` <span class="hidden-blank${hiddenLetterIndex} letter-${item}"> _ </span> `)
-  } 
-  hiddenWord.letters.forEach(createOneHiddenBlank)
+  }
+  hiddenLetterArray.forEach(createOneHiddenBlank)
 }
 
 createNewGameBoard()
 
-/* GOING BACK TO OLD EXAMPLE CODE 
+console.log('JS working.')
+
+})
+/* 
+GOING BACK TO OLD EXAMPLE CODE 
     const newHomes = [
         {address: "27569 Cedarwood Drive", sf: "2,535", bedrooms: 3, baths: 2.5, price: "$496,500"},
         {address: "316 Annandale Drive", sf: "1,326", bedrooms: 4, baths: 2, price: "$275,000"},
@@ -44,11 +49,10 @@ createNewGameBoard()
    $('tbody').append(homeListing);
     })
 })
-*/
 
 //__
 
-/*
+
 const revealCorrectLetters = (correctLetter) => {
   //  $('h2.puzzle-text').text(`_ ${correctLetter} _ _ _`)
 } 
@@ -98,19 +102,19 @@ const thirdTest = 'o'
 checkForCorrectLetters(firstTest)
 checkForCorrectLetters(secondTest)
 checkForCorrectLetters(thirdTest)
-*/
+
 
 // ________PSEUDOCODE:
 // create function that checks if all letters are shown correctly
 // if all correct, display alert saying youWin
-/*__ save Button function for later
+__ save Button function for later
 $('span').click(function() {
   checkForCorrectLetters('o')
   console.log('You clicked alphabet button.')
 })
 // change style of button to reflect alreadyGuessedRight
-*/
+
 // test for h
 
 console.log('JS running okay.')
-})
+*/
