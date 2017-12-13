@@ -1,6 +1,10 @@
 $(document).ready (() => {
 
-let hiddenWord = 'ghost'
+let hiddenWord = {
+  name: 'ghost',
+  letters: [g, h, o, s, t]
+}
+// working here
 
 const createNewGameBoard = () => {
   $('h2.puzzle-text').text('_ _ _ _ _')
@@ -50,18 +54,13 @@ const checkForCorrectLetters = (guessedLetter) => {
   }
 }
 
-// test for h
-const firstTest = 'z'
-const secondTest = 'h'
-const thirdTest = 'x'
-checkForCorrectLetters(firstTest)
-checkForCorrectLetters(secondTest)
-checkForCorrectLetters(thirdTest)
 
-//__ starting back here
 // PSEUDOCODE:
 // create function that checks if all letters are revealed correctly
 // if all correct, display alert saying youWin
+
+
+
 
 /* save Button function for later
 $('span').click(function() {
@@ -69,6 +68,15 @@ $('span').click(function() {
   console.log('You clicked alphabet button.')
 })
 // change style of button to reflect alreadyGuessedRight
+*/
+
+/* test for h
+const firstTest = 'z'
+const secondTest = 'h'
+const thirdTest = 'x'
+checkForCorrectLetters(firstTest)
+checkForCorrectLetters(secondTest)
+checkForCorrectLetters(thirdTest)
 */
 
 
