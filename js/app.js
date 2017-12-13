@@ -2,9 +2,11 @@ $(document).ready (() => {
 
 let hiddenWord = {
   name: 'ghost',
-  letters: [g, h, o, s, t]
+  letters: ['g', 'h', 'o', 's', 't']
 }
-// working here
+
+console.log(hiddenWord.letters[1])
+/*
 
 const createNewGameBoard = () => {
   $('h2.puzzle-text').text('_ _ _ _ _')
@@ -61,15 +63,14 @@ const checkForCorrectLetters = (guessedLetter) => {
 
 
 
-
-/* save Button function for later
+*/
+/*__ save Button function for later
 $('span').click(function() {
   checkForCorrectLetters('o')
   console.log('You clicked alphabet button.')
 })
 // change style of button to reflect alreadyGuessedRight
 */
-
 /* test for h
 const firstTest = 'z'
 const secondTest = 'h'
@@ -77,8 +78,6 @@ const thirdTest = 'x'
 checkForCorrectLetters(firstTest)
 checkForCorrectLetters(secondTest)
 checkForCorrectLetters(thirdTest)
-*/
-
-
+__*/
 console.log('JS running okay.')
 })
