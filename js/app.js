@@ -29,16 +29,25 @@ let mistakenLetters = // ['a', 'b', 'c', 'd', 'e', 'f', 'i', 'j', 'k', 'l', 'm',
 ['z', 'z', 'z']
 let correctLetters = hiddenWord.letters
 
-const newAlphabetButtons = `<span>a</span> <span>b</span> <span>c</span> <span>d</span> <span>e</span> 
+/* const newAlphabetButtons = `<span>a</span> <span>b</span> <span>c</span> <span>d</span> <span>e</span> 
   <span>f</span> <span>g</span> <span>h</span> <span>i</span> <span>j</span> 
   <span>k</span> <span>l</span> <span>m</span> <span>n</span> <span>o </span>  
   <span>p</span> <span>q</span> <span>r</span> <span>s</span> <span>t</span> 
   <span>u</span> <span>v</span> <span>w</span> <span>x</span> <span>y</span> 
-  <span>z</span></h2>`
+  <span>z</span></h2>` */
+
+const theTwentySixLetters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 
 const createNewAlphabetButtons = () => {
-  $('h2.alphabet-text').html(newAlphabetButtons)
+  $('h2.alphabet-text').text(' ')
+  
+  function createSingleButton(item) {
+    let newClassSelector = `<span class="alphabet-button" id="${item}"> ${item} </span>`
+    $('h2.alphabet-text').append(newClassSelector)
   }
+  theTwentySixLetters.forEach(createSingleButton)
+}
+
 createNewAlphabetButtons()
 
 let currentCount = 0
@@ -76,15 +85,13 @@ checkForCorrectLetters(secondTest)
 checkForCorrectLetters(thirdTest)
 
 
-/*
-__ save Button function for later
-$('span').click(function() {
-  checkForCorrectLetters('o')
-  console.log('You clicked alphabet button.')
+$('span.alphabet-button').click(function(event) {
+  let guessedLetter = event.target
+  // checkForCorrectLetters('o')
+  console.log(`You clicked the ${guessedLetter} button.`)
 })
-// change style of button to reflect alreadyGuessedRight
+// you'll need to create another object. 
 
-// test for h
-*/
+
 console.log('JS running okay.')
 })

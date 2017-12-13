@@ -8,7 +8,7 @@ body {
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
 }
-  
+
 .container {
     max-width: 96% 600px;
     max-height: 96% 600px;
@@ -17,55 +17,63 @@ body {
     margin: 1px;
     padding: 1px;
     display: flex;
-    flex-direction: column;    
+    flex-direction: column;
     justify-content: space-around;
-    align-items: center;
+    align-items: center; 
 }
 
 .game-board {
     max-width: 80% 400px;
-            max-height: 80% 400px;
-            min-width: 300px;
-            min-height: 300px;
-            margin: 1px;
-            padding: 1px;
-            display: flex;            
-            flex-direction: column;
-            justify-content: space-around;
-            align-items: center;
-        }
+    max-height: 80% 400px;
+    min-width: 300px;
+    min-height: 300px;
+    margin: 1px;
+    padding: 1px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
 
-            .hangman-box {
-                border: 1px solid black;
-                border-radius: 10px;
-                max-width: 90px;
-                max-height: 90px;
-                min-width: 80px;
-                min-height: 80px;
-                margin: 1px;
-                padding: 1px;
-                justify-content: center;
-                align-items: center;
-                text-align: center;
-            }
-        
-        footer {
-            min-width: 300px;
-            min-height: 100px;
-            margin: 1px;
-            padding: 1px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 10pt;
-            
-        }
-            
-            .empty-bottom, .signature-bottom {
-                min-width: 200px;
-                min-height: 20px;
-                margin: 1px;
-                padding: 1px;
-            }
+.hangman-box {
+    border: 1px solid black;
+    border-radius: 10px;
+    max-width: 90px;
+    max-height: 90px;
+    min-width: 80px;
+    min-height: 80px;
+    margin: 1px;
+    padding: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+span {
+    margin: 1px;
+    padding: 1px;
+    border-radius: 5px;
+    background-color: gray;
+}
+
+footer {
+    min-width: 300px;
+    min-height: 100px;
+    margin: 1px;
+    padding: 1px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 10pt;
+}
+
+.empty-bottom, .signature-bottom {
+    min-width: 200px;
+    min-height: 20px;
+    margin: 1px;
+    padding: 1px;
+}
+
 
