@@ -25,10 +25,6 @@ const createNewGameBoard = () => {
 
 createNewGameBoard()
 
-const revealCorrectLetters = (correctLetter) => {
-  //  $('h2.puzzle-text').text(`_ ${correctLetter} _ _ _`)
-} 
-
 let mistakenLetters = // ['a', 'b', 'c', 'd', 'e', 'f', 'i', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 'u', 'v', 'w', 'x', 'y', 'z']
 ['z', 'z', 'z']
 let correctLetters = hiddenWord.letters
@@ -52,14 +48,15 @@ const hangmanCounterUp = () => {
   console.log(currentCount)
 }
 
-// create function that checks if all letters are revealed correctly
-// if all correct, display alert saying youWin
+const revealCorrectLetters = (classSelector) => {
+  $(`span.letter-${classSelector}`).text(`${classSelector}`)
+} 
 
 const checkForCorrectLetters = (guessedLetter) => {
   for (let i = 0; i < correctLetters.length; i++) {
     if (correctLetters[i] === guessedLetter) {
       console.log(`Nice! Your letter ${guessedLetter} is correct!`)
-      // revealCorrectLetters(guessedLetter)
+      revealCorrectLetters(guessedLetter)
     }
   }
   for (let i = 0; i < mistakenLetters.length; i++) {
