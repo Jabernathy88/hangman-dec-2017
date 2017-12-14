@@ -2,11 +2,9 @@
 
 Project 1, by Jeremy Abernathy
 
-Prototype: v.0.7
+Link to current complete project at BitBalloon:
 
-Due Thursday 12/14/17
-
-* last documented: 7:50pm Wed. 12/13/17
+[ZOMBIE HANGMAN](https://trello.com/b/SMKLURfg/hangman-app-dec-2017)
 
 ### Getting started.
 

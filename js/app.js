@@ -1,11 +1,10 @@
 $(document).ready(() => {
 
-  let hiddenWord = {
+  let hiddenWordGhost = {
     name: 'ghost',
-    hint: 'White, spooky. Like the things in Pacman.'
   }
 
-  let hiddenWordDracula = {
+  let hiddenWord = {
     name: 'dracula',
   }
 
