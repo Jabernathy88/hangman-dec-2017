@@ -52,7 +52,7 @@ const createNewAlphabetButtons = () => {
   $('h2.alphabet-text').text(' ')
   
   function createSingleButton(item) {
-    let newClassSelector = `<span class="alphabet-button" id="${item}"> ${item} </span>`
+    let newClassSelector = `<span class="alphabet-button" id="test ${item}"> ${item} </span>`
     $('h2.alphabet-text').append(newClassSelector)
   }
   theTwentySixLetters.forEach(createSingleButton)
@@ -88,11 +88,10 @@ const checkForCorrectLetters = (guessedLetter) => {
 }
 
 const firstTest = 'g'
-const secondTest = 'h'
-const thirdTest = 'o'
+const secondTest = 'o'
 checkForCorrectLetters(firstTest)
 checkForCorrectLetters(secondTest)
-checkForCorrectLetters(thirdTest)
+// checkForCorrectLetters(thirdTest)
 
 
 $('span.alphabet-button').click(function(event) {
@@ -100,7 +99,10 @@ $('span.alphabet-button').click(function(event) {
   // checkForCorrectLetters('o')
   console.log(`You clicked the ${guessedLetter} button.`)
 })
-// you'll need to create another object. 
+/*
+$('div.test').click(function(event)) {
+  checkForCorrectLetters()
+} */
 
 console.log('JS running okay.')
 })
