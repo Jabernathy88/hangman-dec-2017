@@ -10,7 +10,7 @@ let hiddenWordDracula = {
   hint: 'The lord of all vampires. His grave is in Memphis, TN.'
 }
 
-let hiddenLetters = hiddenWord.name.split("")
+const hiddenLetters = hiddenWord.name.split("")
 
 const createNewGameBoard = () => {
   $('h2.puzzle-text').text(' ')
@@ -25,17 +25,28 @@ const createNewGameBoard = () => {
 
 createNewGameBoard()
 
-let mistakenLetters = // ['a', 'b', 'c', 'd', 'e', 'f', 'i', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 'u', 'v', 'w', 'x', 'y', 'z']
-['z', 'z', 'z']
-
-/* const newAlphabetButtons = `<span>a</span> <span>b</span> <span>c</span> <span>d</span> <span>e</span> 
-  <span>f</span> <span>g</span> <span>h</span> <span>i</span> <span>j</span> 
-  <span>k</span> <span>l</span> <span>m</span> <span>n</span> <span>o </span>  
-  <span>p</span> <span>q</span> <span>r</span> <span>s</span> <span>t</span> 
-  <span>u</span> <span>v</span> <span>w</span> <span>x</span> <span>y</span> 
-  <span>z</span></h2>` */
-
 const theTwentySixLetters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+
+mistakenLetters = ['z', 'z', 'z']
+
+/*
+const mistakenLetters = () => {
+  let hiddenLetterArray = hiddenLetters
+  const negateHiddenWord = (item, index) => {
+    let result = []
+    let hiddenLetterValue = item
+    for (let i = 0; i < theTwentySixLetters.length; i++) {
+      if (theTwentySixLetters[i] !== hiddenLetterValue) {
+        result.push(hiddenLetterValue)
+      }
+    return result
+    }
+  }    
+  theTwentySixLetters.forEach(negateHiddenWord)
+}
+
+console.log(mistakenLetters())
+*/
 
 const createNewAlphabetButtons = () => {
   $('h2.alphabet-text').text(' ')
@@ -90,7 +101,6 @@ $('span.alphabet-button').click(function(event) {
   console.log(`You clicked the ${guessedLetter} button.`)
 })
 // you'll need to create another object. 
-
 
 console.log('JS running okay.')
 })
