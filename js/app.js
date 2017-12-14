@@ -12,6 +12,8 @@ let hiddenWordDracula = {
   hint: 'The lord of all vampires. His grave is in Memphis, TN.'
 }
 
+let hiddenLetters = hiddenWord.name.split("")
+
 const createNewGameBoard = () => {
   $('h2.puzzle-text').text(' ')
   let hiddenLetterArray = hiddenWord.letters
