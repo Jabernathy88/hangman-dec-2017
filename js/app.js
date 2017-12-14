@@ -60,18 +60,28 @@ const createNewAlphabetButtons = () => {
 
 createNewAlphabetButtons()
 
-// const checkWinCondition = () => {
-//  if 
-// }
+let currentWinCount = 0
+let winCountNeeded = hiddenLetters.length
 
-// should require hiddenWord.length check 
+console.log('You need ' + winCountNeeded + ' to win.')
+console.log('You have ' + currentWinCount + ' words correct so far.')
 
+const winCounterUp = () => {
+  currentWinCount++
+  $('h2.win-counter-text').text(`${currentWinCount}`)
+  console.log('You need ' + winCountNeeded + ' to win.')
+  console.log('You have ' + currentWinCount + ' words correct so far.')
+  if (currentWinCount === winCountNeeded) {
+    setTimeout(function(){ alert('... so now you win!') }, 250)
+  }   
+}
 
-let currentCount = 0
+let currentHangCount = 0
 
 const hangmanCounterUp = () => {
-  currentCount++
-  console.log(currentCount)
+  currentHangCount++
+  console.log(currentHangCount)
+  $('h2.hangman-text').text(`${currentHangCount}`)  
 }
 
 const revealCorrectLetters = (classSelector) => {
@@ -82,6 +92,7 @@ const checkForCorrectLetters = (guessedLetter) => {
   for (let i = 0; i < hiddenLetters.length; i++) {
     if (hiddenLetters[i] === guessedLetter) {
       console.log(`Nice! Your letter ${guessedLetter} is correct!`)
+      winCounterUp()
       revealCorrectLetters(guessedLetter)
     }
   }
@@ -89,28 +100,16 @@ const checkForCorrectLetters = (guessedLetter) => {
     if (mistakenLetters[i] === guessedLetter) {   
       console.log(`Oops. This word contains no letter ${guessedLetter}. :-(`)
       hangmanCounterUp()
-      $('h2.hangman-text').text(`${currentCount}`)
     }
   }
 }
 
-const firstTest = 'g'
-const secondTest = 'o'
-checkForCorrectLetters(firstTest)
-checkForCorrectLetters(secondTest)
-// checkForCorrectLetters(thirdTest)
 
 
 $('span.alphabet-button').click(function(event) {
   console.log($(event.target).text())
   let guessedLetter = ($(event.target).text())
   checkForCorrectLetters(guessedLetter)
-})
-
-$('h2.test-button').click(function(event) {
-  let newInput = $('h2.test-button').text()
-  console.log($('h2.test-button').text())
-  checkForCorrectLetters(newInput)
 })
 
 console.log('JS running okay.')
