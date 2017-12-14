@@ -18,7 +18,7 @@ const createNewGameBoard = () => {
   function createOneHiddenBlank(item, index) {
     let hiddenLetterValue = item
     let hiddenLetterIndex = index.toString()
-    $('h2.puzzle-text').append(` <span class="hidden-blank${hiddenLetterIndex} letter-${item}"> _ </span> `)
+    $('h2.puzzle-text').append(`<span class="hidden-blank letter-${item}">_</span>`)
   }
   hiddenLetterArray.forEach(createOneHiddenBlank)
 }
@@ -59,6 +59,13 @@ const createNewAlphabetButtons = () => {
 }
 
 createNewAlphabetButtons()
+
+// const checkWinCondition = () => {
+//  if 
+// }
+
+// should require hiddenWord.length check 
+
 
 let currentCount = 0
 
