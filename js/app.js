@@ -1,10 +1,10 @@
 $(document).ready(() => {
 
-  let hiddenWordGhost = {
+  let hiddenWord = {
     name: 'ghost',
   }
 
-  let hiddenWord = {
+  let hiddenWordTwo = {
     name: 'dracula',
   }
 
