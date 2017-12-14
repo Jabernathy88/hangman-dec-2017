@@ -11,6 +11,7 @@ let hiddenWordDracula = {
 }
 
 const hiddenLetters = hiddenWord.name.split("")
+console.log(hiddenLetters)
 
 const createNewGameBoard = () => {
   $('h2.puzzle-text').text(' ')
@@ -25,9 +26,21 @@ const createNewGameBoard = () => {
 
 createNewGameBoard()
 
-const theTwentySixLetters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+let theTwentySixLetters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 
-mistakenLetters = ['z', 'z', 'z']
+let mistakenLetters = []
+
+/* const defineWrongAnswers = () => {
+  function findMatches(possibleLetter) { 
+  for (let i = 0; i < hiddenLetters.length; i++) {
+    if (hiddenLetters[i] === possibleLetter) {
+    } 
+
+  }
+  }*/
+
+// defineWrongAnswers(theTwentySixLetters)
+// console.log(mistakenLetters)
 
 /*
 const mistakenLetters = () => {
@@ -76,12 +89,14 @@ const winCounterUp = () => {
   }   
 }
 
-let currentHangCount = 0
+let currentHangCount = 6
+let losingCount = 0
 
-const hangmanCounterUp = () => {
-  currentHangCount++
+const hangmanCounterDown = () => {
+  currentHangCount--
   console.log(currentHangCount)
-  $('h2.hangman-text').text(`${currentHangCount}`)  
+  $('h2.hangman-text').text(`${currentHangCount}`)
+  console.log('You have ' + currentHangCount + ' guesses remaining.')
 }
 
 const revealCorrectLetters = (classSelector) => {
@@ -96,14 +111,20 @@ const checkForCorrectLetters = (guessedLetter) => {
       revealCorrectLetters(guessedLetter)
     }
   }
-  for (let i = 0; i < mistakenLetters.length; i++) {
-    if (mistakenLetters[i] === guessedLetter) {   
-      console.log(`Oops. This word contains no letter ${guessedLetter}. :-(`)
-      hangmanCounterUp()
-    }
+  if (hiddenLetters.indexOf(guessedLetter) < 0) {
+    console.log(`Oops. This word contains no letter ${guessedLetter}.`)
+    hangmanCounterDown()
   }
 }
 
+
+
+/* (let i = 0; i < mistakenLetters.length; i++) {
+  if (mistakenLetters[i] === guessedLetter) {   
+    console.log(`Oops. This word contains no letter ${guessedLetter}. :-(`)
+    hangmanCounterDown()
+  }
+*/
 
 
 $('span.alphabet-button').click(function(event) {
