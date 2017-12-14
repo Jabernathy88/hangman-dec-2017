@@ -4,7 +4,7 @@ Project 1, by Jeremy Abernathy
 
 Link to current complete project at BitBalloon:
 
-[ZOMBIE HANGMAN](https://trello.com/b/SMKLURfg/hangman-app-dec-2017)
+[ZOMBIE HANGMAN](http://condescending-clarke-ffff23.bitballoon.com/)
 
 ### Getting started.
 
