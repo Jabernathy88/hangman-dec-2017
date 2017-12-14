@@ -30,37 +30,6 @@ let theTwentySixLetters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k'
 
 let mistakenLetters = []
 
-/* const defineWrongAnswers = () => {
-  function findMatches(possibleLetter) { 
-  for (let i = 0; i < hiddenLetters.length; i++) {
-    if (hiddenLetters[i] === possibleLetter) {
-    } 
-
-  }
-  }*/
-
-// defineWrongAnswers(theTwentySixLetters)
-// console.log(mistakenLetters)
-
-/*
-const mistakenLetters = () => {
-  let hiddenLetterArray = hiddenLetters
-  const negateHiddenWord = (item, index) => {
-    let result = []
-    let hiddenLetterValue = item
-    for (let i = 0; i < theTwentySixLetters.length; i++) {
-      if (theTwentySixLetters[i] !== hiddenLetterValue) {
-        result.push(hiddenLetterValue)
-      }
-    return result
-    }
-  }    
-  theTwentySixLetters.forEach(negateHiddenWord)
-}
-
-console.log(mistakenLetters())
-*/
-
 const createNewAlphabetButtons = () => {
   $('h2.alphabet-text').text(' ')
   
@@ -85,7 +54,7 @@ const winCounterUp = () => {
   console.log('You need ' + winCountNeeded + ' to win.')
   console.log('You have ' + currentWinCount + ' words correct so far.')
   if (currentWinCount === winCountNeeded) {
-    setTimeout(function(){ alert('... so now you win!') }, 250)
+    setTimeout(function(){ alert('YOU WIN!') }, 250)
   }   
 }
 
@@ -97,6 +66,9 @@ const hangmanCounterDown = () => {
   console.log(currentHangCount)
   $('h2.hangman-text').text(`${currentHangCount}`)
   console.log('You have ' + currentHangCount + ' guesses remaining.')
+  if (currentHangCount <= losingCount) {
+    setTimeout(function(){ alert('Sorry. You lose.') }, 250)
+  }
 }
 
 const revealCorrectLetters = (classSelector) => {
@@ -116,16 +88,6 @@ const checkForCorrectLetters = (guessedLetter) => {
     hangmanCounterDown()
   }
 }
-
-
-
-/* (let i = 0; i < mistakenLetters.length; i++) {
-  if (mistakenLetters[i] === guessedLetter) {   
-    console.log(`Oops. This word contains no letter ${guessedLetter}. :-(`)
-    hangmanCounterDown()
-  }
-*/
-
 
 $('span.alphabet-button').click(function(event) {
   console.log($(event.target).text())
