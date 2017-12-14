@@ -1,12 +1,12 @@
 $(document).ready (() => {
 
-let hiddenWordGhost = {
+let hiddenWord = {
   name: 'ghost',
   letters: ['g', 'h', 'o', 's', 't'],
   hint: 'White, spooky. Like the things in Pacman.'
 }
 
-let hiddenWord = {
+let hiddenWordDracula = {
   name: 'dracula',
   letters: ['d', 'r', 'a', 'c', 'u', 'l', 'a'],
   hint: 'The lord of all vampires. His grave is in Memphis, TN.'
@@ -77,9 +77,9 @@ const checkForCorrectLetters = (guessedLetter) => {
   }
 }
 
-const firstTest = 'd'
-const secondTest = 'r'
-const thirdTest = 'a'
+const firstTest = 'g'
+const secondTest = 'h'
+const thirdTest = 'o'
 checkForCorrectLetters(firstTest)
 checkForCorrectLetters(secondTest)
 checkForCorrectLetters(thirdTest)
