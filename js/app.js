@@ -2,13 +2,11 @@ $(document).ready (() => {
 
 let hiddenWord = {
   name: 'ghost',
-  letters: ['g', 'h', 'o', 's', 't'],
   hint: 'White, spooky. Like the things in Pacman.'
 }
 
 let hiddenWordDracula = {
   name: 'dracula',
-  letters: ['d', 'r', 'a', 'c', 'u', 'l', 'a'],
   hint: 'The lord of all vampires. His grave is in Memphis, TN.'
 }
 
@@ -16,7 +14,7 @@ let hiddenLetters = hiddenWord.name.split("")
 
 const createNewGameBoard = () => {
   $('h2.puzzle-text').text(' ')
-  let hiddenLetterArray = hiddenWord.letters
+  let hiddenLetterArray = hiddenLetters
   function createOneHiddenBlank(item, index) {
     let hiddenLetterValue = item
     let hiddenLetterIndex = index.toString()
@@ -29,7 +27,6 @@ createNewGameBoard()
 
 let mistakenLetters = // ['a', 'b', 'c', 'd', 'e', 'f', 'i', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 'u', 'v', 'w', 'x', 'y', 'z']
 ['z', 'z', 'z']
-let correctLetters = hiddenWord.letters
 
 /* const newAlphabetButtons = `<span>a</span> <span>b</span> <span>c</span> <span>d</span> <span>e</span> 
   <span>f</span> <span>g</span> <span>h</span> <span>i</span> <span>j</span> 
@@ -64,8 +61,8 @@ const revealCorrectLetters = (classSelector) => {
 } 
 
 const checkForCorrectLetters = (guessedLetter) => {
-  for (let i = 0; i < correctLetters.length; i++) {
-    if (correctLetters[i] === guessedLetter) {
+  for (let i = 0; i < hiddenLetters.length; i++) {
+    if (hiddenLetters[i] === guessedLetter) {
       console.log(`Nice! Your letter ${guessedLetter} is correct!`)
       revealCorrectLetters(guessedLetter)
     }
