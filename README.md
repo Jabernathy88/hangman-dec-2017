@@ -5,6 +5,7 @@ Project 1, by Jeremy Abernathy
 Link to current complete project at BitBalloon:
 
 [ZOMBIE HANGMAN](http://condescending-clarke-ffff23.bitballoon.com/)
+or [DoubleLetters](http://festive-nightingale-2b9c1d.bitballoon.com/)
 
 ### Getting started.
 
