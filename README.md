@@ -1,26 +1,33 @@
 # ZOMBIE HANGMAN
 
-Project 1, by Jeremy Abernathy
+WDI Project 1
+By Jeremy Abernathy
+Dec. 14, 2017
 
-Link to current complete project at BitBalloon:
+### Short Description
 
-[ZOMBIE HANGMAN](http://condescending-clarke-ffff23.bitballoon.com/)
-or [DoubleLetters](http://festive-nightingale-2b9c1d.bitballoon.com/)
+Hangman is a classic children's game with simple rules that, for a modern audience, could be scaled up and styled in unique ways. The TV game show "Wheel of Fortune" is an example of how Hangman's concept of "fill the hidden blanks" can apply to different formats for different audiences. 
 
-### Getting started.
+### Link to deployed project
 
-Here's the link to my Trello for tracking user stories:
+[ZOMBIE HANGMAN](http://condescending-clarke-ffff23.bitballoon.com/): first complete prototype, hosted at BitBalloon.
+
+[ZOMBIE 2](http://festive-nightingale-2b9c1d.bitballoon.com/): same example but with word including duplicate letters.
+
+### Link to Trello
+
+This is where I tracked user stories and pseudocode from beginning to end:
 
 [Hangman Project Trello](https://trello.com/b/SMKLURfg/hangman-app-dec-2017)
 
 ### Wireframes.
 
-Image below: 
+Here is the mockup I used to get started: 
 
 ![wireframeSketch](./media/hangman-wireframe-mvp1.png)
 
-### More progress to come.
+### List of technologies used
 
-For my own information: [Grading Info](https://git.generalassemb.ly/atl-wdi/wdi-curriculum/tree/master/projects/unit_01)
+CSS, HTML, Javascript, JQuery, Flexbox
 
-Yes!
+Version 2 coming soon, to feature theming based on The Walking Dead TV series.
